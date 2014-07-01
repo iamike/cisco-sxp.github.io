@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta, title, CSS, favicons, etc. -->
+    {% include header-cisco.html %}
+  </head>
+  <body class="{{ page.slug }}">
+    <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div id="wrap">      
+      {% include cisco-primaryNav.html %}
+      {% include userPnl.html %} 
+      <!-- Begin page content -->
+      <div class="container" id="main">
+        <div class="row">
+          <div class="col-lg-5 col-lg-push-6">
+            {% include searchBox.html %}
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-2 ">
+
+             {% include cisco-secondaryNav.html %}
+          </div>
+          <div class="col-lg-7 col-lg-push-2">
+            <!-- Page content of course! -->
+            {{ content }}
+          </div>
+        </div>
+      </div>
+
+    </div>
+    {% include r-stickPnl.html %} 
+    {% include footer-cisco.html %}    
+  </body>
+</html>
