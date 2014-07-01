@@ -138,7 +138,10 @@ module.exports = function (grunt) {
         dest: 'docs/assets/js/docs.min.js'
       },
       ciscoJs:{
-        src:['docs/assets/js/_cisco/global.js'],
+        src:[
+          'docs/assets/js/_cisco/owl.carousel.js',
+          'docs/assets/js/_cisco/global.js'
+        ],
         dest:'docs/assets/js/cisco.min.js'
       }
     },
