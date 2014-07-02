@@ -1,7 +1,7 @@
 $(function(){
 
 	//alert('cisco global');
-	var owl = $("#owl-demo");
+	var owl = $("#announcement");
 	 
 	  owl.owlCarousel({
 	    scrollPerPage:true, 
