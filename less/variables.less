@@ -4,7 +4,7 @@
 
 
 //== Colors
-//
+// 
 //## Gray and brand colors for use across Bootstrap.
 
 @gray-darker:            lighten(#000, 13.5%); // #222
@@ -14,10 +14,10 @@
 @gray-lighter:           lighten(#000, 93.5%); // #eee
 
 @brand-primary:         #00adee;
-@brand-success:         #5cb85c;
+@brand-success:         #7bc848;
 @brand-info:            #5bc0de;
 @brand-warning:         #f0ad4e;
-@brand-danger:          #d9534f;
+@brand-danger:          #db3726;
 
 
 //== Scaffolding
@@ -39,7 +39,7 @@
 //
 //## Font, line-height, and color for body text, headings, and more.
 
-@font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-family-sans-serif:  "Helvetica Neue", "simHei", Helvetica, Arial, sans-serif;
 @font-family-serif:       Georgia, "Times New Roman", Times, serif;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 @font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
@@ -99,8 +99,8 @@
 @line-height-large:         1.33;
 @line-height-small:         1.5;
 
-@border-radius-base:        4px;
-@border-radius-large:       6px;
+@border-radius-base:        5px;
+@border-radius-large:       15px;
 @border-radius-small:       3px;
 
 //** Global color for active items (e.g., navs or dropdowns).
@@ -141,9 +141,9 @@
 
 @btn-font-weight:                normal;
 
-@btn-default-color:              #333;
-@btn-default-bg:                 #fff;
-@btn-default-border:             #ccc;
+@btn-default-color:              #fff;
+@btn-default-bg:                 @brand-primary;
+@btn-default-border:             @brand-primary;
 
 @btn-primary-color:              #fff;
 @btn-primary-bg:                 @brand-primary;
@@ -173,21 +173,21 @@
 //##
 
 //** `<input>` background color
-@input-bg:                       #fff;
+@input-bg:                       #ef5937;
 //** `<input disabled>` background color
 @input-bg-disabled:              @gray-lighter;
 
 //** Text color for `<input>`s
-@input-color:                    @gray;
+@input-color:                    #fff;
 //** `<input>` border color
-@input-border:                   #ccc;
+@input-border:                   #ef5937;
 //** `<input>` border radius
-@input-border-radius:            @border-radius-base;
+@input-border-radius:            @border-radius-large;
 //** Border color for inputs on focus
 @input-border-focus:             #66afe9;
 
 //** Placeholder text color
-@input-color-placeholder:        @gray-light;
+@input-color-placeholder:        #fff;
 
 //** Default `.form-control` height
 @input-height-base:              (@line-height-computed + (@padding-base-vertical * 2) + 2);
@@ -200,7 +200,7 @@
 @legend-border-color:            #e5e5e5;
 
 //** Background color for textual input addons
-@input-group-addon-bg:           @gray-lighter;
+@input-group-addon-bg:           #DA4321;
 //** Border color for textual input addons
 @input-group-addon-border-color: @input-border;
 
@@ -429,7 +429,7 @@
 
 @pagination-color:                     @link-color;
 @pagination-bg:                        #fff;
-@pagination-border:                    #ddd;
+@pagination-border:                    none;
 
 @pagination-hover-color:               @link-hover-color;
 @pagination-hover-bg:                  @gray-lighter;
@@ -437,7 +437,7 @@
 
 @pagination-active-color:              #fff;
 @pagination-active-bg:                 @brand-primary;
-@pagination-active-border:             @brand-primary;
+@pagination-active-border:             transparent;
 
 @pagination-disabled-color:            @gray-light;
 @pagination-disabled-bg:               #fff;
@@ -767,7 +767,7 @@
 @breadcrumb-padding-vertical:   8px;
 @breadcrumb-padding-horizontal: 15px;
 //** Breadcrumb background color
-@breadcrumb-bg:                 #f5f5f5;
+@breadcrumb-bg:                 transparent;
 //** Breadcrumb text color
 @breadcrumb-color:              #ccc;
 //** Text color of current page in the breadcrumb

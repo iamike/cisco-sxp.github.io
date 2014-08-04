@@ -106,6 +106,13 @@ module.exports = function (grunt) {
           'js/affix.js'
         ],
         dest: 'dist/js/<%= pkg.name %>.js'
+      },
+      ciscoJs:{
+        src:[
+          'docs/assets/js/_cisco/owl.carousel.js',
+          'docs/assets/js/_cisco/global.js'
+        ],
+        dest:'docs/assets/js/cisco.js'
       }
     },
 
@@ -139,8 +146,7 @@ module.exports = function (grunt) {
       },
       ciscoJs:{
         src:[
-          'docs/assets/js/_cisco/owl.carousel.js',
-          'docs/assets/js/_cisco/global.js'
+          'docs/assets/js/cisco.js'
         ],
         dest:'docs/assets/js/cisco.min.js'
       }
@@ -188,6 +194,7 @@ module.exports = function (grunt) {
         },
         files: {
           'docs/assets/css/cisco.css': 'docs/assets/less/cisco.less'
+
         }
       }
     },
@@ -381,7 +388,7 @@ module.exports = function (grunt) {
         tasks: ['jshint:test', 'qunit']
       },
       less: {
-        files: ['less/*.less','docs/assets/less/*.less'],
+        files: ['less/*.less','docs/assets/less/*.less','docs/assets/less/**/*.less'],
         tasks: ['less','cssmin','copy:docs']
       }, 
       ciscoJs:{

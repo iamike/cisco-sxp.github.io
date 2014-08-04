@@ -26,6 +26,15 @@
         <li{% if page.slug == "customize" %} class="active"{% endif %}>
           <a href="../customize">Customize</a>
         </li>
+        <li class="dropdown" {% if page.slug == "cisco" %} class="active"{% endif %}>
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">CISCO Pages <span class="caret"></span> </a> 
+           <ul class="dropdown-menu" role="menu">
+              <li><a href="/cisco-login">Login</a></li>
+              <li><a href="/cisco-mkt">Apps Marketplace</a></li>
+              <li><a href="/cisco-usrLanding">User Landing</a></li>
+            </ul>
+        </li>
+
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="{{ site.expo }}" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Expo');">Expo</a></li>

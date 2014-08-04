@@ -19,6 +19,12 @@ title: 登录
 						  <div class="panel-body">
 						    <form role="form">
 						    	<div class="form-group">
+									<div class="alert alert-warning alert-dismissible" role="alert">
+									  <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+									  <strong>Warning!</strong> Error Message....
+									</div>
+						    	</div>
+						    	<div class="form-group">
 							    
 							    <a href="#">English</a>
 							  </div>
@@ -30,18 +36,15 @@ title: 登录
 							    <label class="hidden" for="exampleInputPassword1">密码</label>
 							    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="密码">
 							  </div>
-							  <div class="form-group text-right">
+							  <div class="form-group text-right" style="margin-bottom:0px;">
 								  <div class="checkbox pull-left">
-								    <label class="text-primary">
+								    <label class="text-primary" style='font-size:14px;'>
 								      <input type="checkbox"> 记得我
 								    </label>
 								  </div>
 								  <button type="submit" class="btn btn-primary">登 录</button>
 							  </div>
-							  <div class="form-group text-right">
-							  		<a href="#">忘记密码？</a>
 
-							  </div>
 							</form>
 						  </div>
 						</div>
@@ -53,8 +56,45 @@ title: 登录
 			</div>
 		</div>
 	</div>
-	<div class="cloud x3"></div>
-	<div class="cloud x4"></div>
 	<div class="cloud x5"></div>
 
+</div>
+<!-- Modal -->
+<div class="modal fade pswRecovery" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h1 class="modal-title" id="myModalLabel">忘记密码？</h1>
+      </div>
+      <div class="modal-body">
+      	<div class="stepwizard">
+		    <div class="stepwizard-row">
+		        <div class="stepwizard-step">
+		            <button type="button" class="btn btn-default btn-circle">1</button>
+		            <p>Cart</p>
+		        </div>
+		        <div class="stepwizard-step">
+		            <button type="button" class="btn btn-primary btn-circle">2</button>
+		            <p>Shipping</p>
+		        </div>
+		        <div class="stepwizard-step">
+		            <button type="button" class="btn btn-default btn-circle" disabled="disabled">3</button>
+		            <p>Payment</p>
+		        </div> 
+		    </div>
+		</div>
+
+        <form class="form-inline" role="form">
+		  <div class="form-group text-center">
+		    <label class="sr-only" for="exampleInputEmail2">Email address</label>
+		    <input type="email" class="form-control" id="exampleInputEmail2" placeholder="请输入email">
+		  </div>
+		</form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">发送</button>
+      </div>
+    </div>
+  </div>
 </div>

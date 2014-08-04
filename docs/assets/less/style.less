@@ -20,8 +20,11 @@ html,body {
 }
 #footer {
 	background: #5bacc7;
-	position: relative;
-	z-index: 2;	
+	position: fixed;
+	z-index: 2;
+	width: 100%;
+	bottom: 0px;
+	left: 0px;	
 
 	p{color:#fff;font-size:12px; padding-top: 10px;}
 	.cloudWrap {
@@ -42,7 +45,7 @@ html,body {
 			width:@couldsize;
 			height:@couldsize;
 			background: #5bacc7;
-			top:20px; 
+			top:20px;  
 		}
 		&:after { left:-70px;}
 		&:before {left:70px;}
@@ -66,7 +69,7 @@ html,body {
 }
 
 .primaryNav {
-	margin-bottom: 130px;
+	margin-bottom: 160px;
 	border: none;
 	&:before{
 		content:" ";
@@ -82,16 +85,16 @@ html,body {
 	.navbar-nav {
 		margin: 127px 114px 0 0;
 		&>li+li {
-			background-color: #7bc844;
+			background-color: #74c82c;
 		}
 		&>li+li+li {
-			background-color: #C8B344;
+			background-color: #ff77ac;
 		}
 		&>li {
 			width: 70px;
 			height: 70px;
 			border-radius: 35px;
-			background-color: #ff77ac;			
+			background-color: #e0d0af;			
 			margin: 10px;
 			text-align: center;
 			.box-shadow(1px 1px 1px 0px #fff); 
@@ -112,10 +115,24 @@ html,body {
 				top:auto;
 
 			}
+
+
 			&>a {
+
 				padding: 0px;
 				line-height: 70px;
 				color:#fff;
+				font-size: 33px;
+				
+				&.icon-bag{
+					font-size: 43px;
+				}
+				&.icon-community{
+					font-size: 43px;
+				}
+				span{
+					display: none;
+				}
 				&:hover{
 					background:transparent;
 				}
@@ -125,7 +142,7 @@ html,body {
 }
 .secondaryNav {
 	li{ background: #fff; padding: 0px;
-		&.active{
+		&.active,&:hover{
 
 
 			a{ color: #47a6ea; background: transparent;
@@ -157,6 +174,7 @@ html,body {
 
 	}  
 }
+/* search */
 #search {
 	padding-bottom: 64px;
 
@@ -171,6 +189,8 @@ html,body {
 		padding-left: 35px;
 		border-radius: 5px;
 		border:none;
+		background: #f1f1f1;
+		color: @brand-primary;
 	}
 	.input-group-btn {
 		left: -5px;
@@ -199,6 +219,7 @@ html,body {
 		position: absolute;
 		left: -12px;
 		top: 0px;
+
 	}
 	&:hover{
 		right: 0px;
@@ -209,25 +230,29 @@ html,body {
 	top: 0px;
 	left: auto;
 	right: -80px;
+	.transition(right 1s);
+
 	background: #d29f43;
 	color: #fff;
 	padding:40px 10px; 
 	width:120px;
 	height: 100%;
 	list-style: none;
+
 	li {
 		padding: 10px 5px;
 		.glyphicon {
 			padding-right: 10px;
-		}
+		} 
 		a{color:#fff;
+			b{font-size: 12px;} 
 			&:hover{
 				color:#5E3E32;
 			}
 		}
 	}
 }
-#userPnl {
+#userPnl { 
 
 		.round (@width,@height,@radius) {
 			width: @width; height: @width;
@@ -237,7 +262,10 @@ html,body {
 			content:" ";
 			display: block;
 			position: absolute;
-			.round(50px,50px,50px);
+			.round(80px,80px,50%);
+			background: #fff;
+			top: 15px;
+			left:-30px;
 		}
 		.round(230px, 230px, 230px);
 		background: #d4cdc3;
@@ -288,6 +316,10 @@ html,body {
 		font-size: 12px;
 	}
 	.status {
+		.dropdown:hover .dropdown-menu {
+		    display: block;
+		    margin-top: 0px;
+		 }
 		.btn{
 			background: none;
 			background-image: none;
@@ -325,23 +357,45 @@ html,body {
 				}
 				.glyphicon-play {
 					font-size: 18px;
-					padding-left: 3px;
-					top: 0px;
+					padding-left: 2px;
+					top: -1px;
 				}
 
+			}
+			.btn-default {
+				color: #3a353c;
+				background-color: #69bacd;
 			}
 			p{padding: 0px; margin: 0px;}
 		}
 	}
 
 }
-
+ 
 /* clean mode */
 .has-cloud {
 	#footer {display: none;}
+	a,label {
+		font-size: 11px;
+	}
+	.alert{
+		position: absolute;
+		left: 17px;
+		top: 30px;
+	}
 	#clouds {
 		background:#d4eef9 url('../img/bg-cloud.png') repeat-x scroll center bottom;
 		height: 100%;
+		.cloud{
+			width: 299px; height: 187px; margin-bottom: -120px;
+			border-radius: 0px;
+			background:transparent url("../img/cloud.png") no-repeat scroll left top; 
+
+			&:after,&:before{
+				content:" ";
+				display: none;
+			}
+		}
 	}
 	.login {
 	  display: block; 
@@ -352,20 +406,25 @@ html,body {
 	}
 	.brand{
 		width:167px; height: 110px;
-		margin: 120px 0px 0px 67px;
+		margin: 127px 0 0 88px;
 		background: transparent url('../img/brand-lg.png') no-repeat scroll left top;
 	}
 	.book {
-		min-width: 500px;
+		width: 665px;
+		height: 455px; margin-top: -50px;
 		background: transparent url('../img/book.png') no-repeat scroll left top;
 		background-size: cover;
 		
 	}
 	.panel-body{
 		padding:115px 35px 35px 25px;
+	
+	}
+	.btn-primary {
+		border-radius: 15px;
+		padding: 4px 20px;
 	}
 }
-
 
 
 /* layout background */
@@ -376,8 +435,9 @@ body.usrLanding {
 	background: #6dabc6 url('../img/bg-image-customize.png') no-repeat fixed center bottom; 
 	background-size: cover;
 
+
 	.primaryNav{
-		margin-bottom: 100px;
+		margin-bottom: 130px;
 		&:before {
 			height:142px;
 			background-image:url('../img/bg-cloud-repeat.png');
@@ -464,6 +524,7 @@ body.usrLanding {
 	    	padding: 0px 15px;
 	    	color: #ee5637;
 	    	margin: 0px 0px 10px 0px;
+	    	font-family: "simHei";
 
 	    }
 	}
@@ -528,18 +589,43 @@ body.usrLanding {
 /* apps list II */
 .apps {
 	margin-bottom: 30px;
+	&:first-child {
+		.col-lg-3 {
+			position: relative;
+
+			&:after {
+				content:" ";
+				 display: block;
+				 width: 160px;
+				 height: 160px;
+				 background: transparent url('../img/circle-padding.png') no-repeat scroll left top;
+				 position: absolute;
+				right: -78px;
+				bottom: -95px;
+				 z-index: 0;
+			}
+			&:last-child{
+				&:after{
+					display:none;
+				}
+			}			
+		}
+		.cuadro_intro_hover {
+
+		}
+	}
 	.cuadro_intro_hover {
 		height: 50%;
 		margin: -15px;
 		border:15px solid #fff;
 		border-radius: 50%;
 		background: #fff;
-		.box-shadow(4px 4px 2px #989898);
+		z-index: 9;
 		img {width: 100%; height: 100%;}
 		p{margin-bottom: 0px;}
 		&:hover {
 			.caption{
-				.translate(0; -60px); 
+				.translate(0; -60px);  
 			}
 		}
 		.blur {
@@ -558,12 +644,13 @@ body.usrLanding {
 .community{
 	padding-top: 30px;
 	.col-lg-4 {padding-bottom: 25px;}
+
 	h4 {padding-left: 10px;padding-right: 10px;}
 	.cuadro_intro_hover {
 		height: 50%; 
 		border-radius: 5px;
 
-		img {width: 100%; height: 100%;}
+		img {width: 165px; height: 165px;}
 		p{margin-bottom: 0px;}
 		&:hover {
 			.caption{
@@ -581,5 +668,47 @@ body.usrLanding {
 			top: 100%;
 		}
 	}
+
+}
+
+/*lang*/
+.langSwitch.dropdown:hover .dropdown-menu {
+    display: block;
+    li a:hover{
+    	background:#efefef;
+    }
+ }
+.langSwitch{
+	width:66px;
+	margin-left: -5px;
+
+	.dropdown-menu {
+		min-width: 60px;
+		right:13px;
+		text-align: center;
+		margin-top: 0px;
+	} 
+	.flag-icon-squared {
+		line-height: 1.5em;
+		width: 1.5em;
+		border-radius: 50%; 
+	}
+	#lang {
+		background-image:none;
+		border:none;
+		background-color:transparent;
+		box-shadow: none;
+		padding: 0px;
+
+
+		.caret {
+			margin-left: 1em;
+		}
+	}	
+}
+
+/*pswRecovery*/
+.pswRecovery {
+
 
 }
